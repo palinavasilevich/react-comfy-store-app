@@ -14,6 +14,10 @@ import {
   Register,
   SingleProduct,
 } from "./pages";
+import { ErrorElement } from "./components";
+
+//loaders
+import { loader as landingLoader, loader } from "./pages/Landing";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +28,8 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
+        errorElement: <ErrorElement />,
+        loader: landingLoader,
       },
       {
         path: "products",
